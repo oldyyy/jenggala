@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.RespondenService.RespondenInfoDialogFragment">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/brown_light"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvRespondenName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Responden"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvRespondenAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alamat: Jalan Mawar No. 5"
+            android:textColor="@color/black"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvRespondenPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Hp: 08xxxxxxxxxxx"
+            android:textColor="@color/black"
+            android:paddingBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Tutup" />
+    </LinearLayout>
+
+</FrameLayout>

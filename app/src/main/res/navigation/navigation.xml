@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@+id/loginFragment">
+
+    <action
+        android:id="@+id/action_global_to_trackingFragment"
+        app:destination="@id/trackingFragment" />
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.jenggala.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@+id/homeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.jenggala.Home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_SHPFragment"
+            app:destination="@id/SHPFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_SHPBFragment"
+            app:destination="@id/SHPBFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.jenggala.Profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@+id/loginFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/SHPFragment"
+        android:name="com.example.jenggala.Home.SHP.SHPFragment"
+        android:label="SHPFragment"
+        tools:layout="@layout/fragment_s_h_p">
+        <action
+            android:id="@+id/action_SHPFragment_to_trackingFragment"
+            app:destination="@id/trackingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trackingFragment"
+        android:name="com.example.jenggala.Home.Tracking.TrackingFragment"
+        android:label="TrackingFragment"
+        tools:layout="@layout/fragment_tracking">
+        <argument
+            android:name="responden"
+            app:argType="com.example.jenggala.API.Responden" />
+        <argument
+            android:name="fragmentOrigin"
+            app:argType="string" />
+        <argument
+            android:name="fromNotification"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/SHPBFragment"
+        android:name="com.example.jenggala.Home.SHPB.SHPBFragment"
+        android:label="SHPBFragment"
+        tools:layout="@layout/fragment_s_h_p_b">
+        <action
+            android:id="@+id/action_SHPBFragment_to_trackingFragment"
+            app:destination="@id/trackingFragment" />
+    </fragment>
+</navigation>
