@@ -9,19 +9,19 @@ import retrofit2.http.POST
 interface ApiInterface {
 
     @FormUrlEncoded
-    @POST("login.php")
+    @POST("login")
     suspend fun loginUser(@Field("username") username: String, @Field("password") password: String): Response<GlobalResponse>
 
     @FormUrlEncoded
-    @POST("user_info.php")
+    @POST("user-info")
     suspend fun getUserDetails(@Field("username") username: String, @Field("auth_token") auth_token: String): Response<GlobalResponse>
 
     @FormUrlEncoded
-    @POST("plotting_info.php")
+    @POST("plotting")
     suspend fun getPlottingDetails(@Field("kode_petugas") kode_petugas: String): Response<GlobalResponse>
 
     @FormUrlEncoded
-    @POST("insert_tracking.php")
+    @POST("tracking")
     suspend fun insertTracking(
         @Field("kode_responden") kode_responden: String,
         @Field("kode_petugas") kode_petugas: String,
@@ -37,14 +37,14 @@ interface ApiInterface {
         @Field("keterangan") keterangan: String?
     ): Response<GlobalResponse>
 
-    @GET("kabkot.php")
+    @GET("kabkot")
     suspend fun getKabkot(): Response<GlobalResponse>
 
     @FormUrlEncoded
-    @POST("kecamatan.php")
+    @POST("kecamatan")
     suspend fun getKecamatan(@Field("kode_kabkot") kode_kabkot: String): Response<GlobalResponse>
 
     @FormUrlEncoded
-    @POST("keldes.php")
+    @POST("keldes")
     suspend fun getKeldes(@Field("kode_kecamatan") kode_kecamatan: String): Response<GlobalResponse>
 }

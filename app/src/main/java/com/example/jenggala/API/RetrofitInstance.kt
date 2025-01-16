@@ -17,7 +17,7 @@ object RetrofitInstance {
 
     val api: ApiInterface by lazy {
         Retrofit.Builder()
-            .baseUrl("http://192.168.1.13/simovie/")
+            .baseUrl("https://jenggala.cathajatim.id/api/")
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()

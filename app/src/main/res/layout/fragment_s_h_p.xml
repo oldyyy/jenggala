@@ -33,8 +33,8 @@
                 android:background="?attr/colorPrimary"
                 app:title="SHP"
                 app:titleTextColor="@android:color/white"
-                app:navigationIcon="@drawable/baseline_arrow_back_24"
-                app:menu="@menu/add_responden"/>
+                app:navigationIcon="@drawable/baseline_arrow_back_24"/>
+<!--                app:menu="@menu/add_responden"-->
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.cardview.widget.CardView

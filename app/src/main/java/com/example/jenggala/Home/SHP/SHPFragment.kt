@@ -205,10 +205,10 @@ class SHPFragment : Fragment() {
     }
 
     // Tambahkan menu info responden
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.add_responden, menu)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
+//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+//        inflater.inflate(R.menu.add_responden, menu)
+//        super.onCreateOptionsMenu(menu, inflater)
+//    }
 
     // Tambahkan menu info responden
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -72,6 +72,7 @@ class LoginFragment : Fragment() {
             // Eksekusi proses login dengan coroutine jika valid
             lifecycleScope.launch(Dispatchers.IO) {
                 try {
+                    Log.d("Info account", "Username: $username, Password: $password")
                     val result = RetrofitInstance.api.loginUser(username, password)
                     val responseBody = result.body()
 
